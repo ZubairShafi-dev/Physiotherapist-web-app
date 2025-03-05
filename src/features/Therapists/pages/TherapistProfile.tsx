@@ -1,25 +1,26 @@
+import TotalPatients from "@/features/Reports/components/TotalPatients"
+import TherapistInfo from "../Components/TherapistInfo"
 import { Button } from "@/components/ui/button"
 import { Calendar, ListFilter, RefreshCcwDot, User, Wallet } from "lucide-react"
-import Cards from "../components/Cards"
-import Topdepartments from "../components/Topdepartments"
+import Cards from "@/features/Reports/components/Cards"
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import TotalEarnings from "../components/TotalEarnings"
-import TotalPatients from "../components/TotalPatients"
-import TherapistTable from "../components/TherapistTable"
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } from "@/components/ui/popover"
+import Feedback from "../Components/Feedback"
 
-const Report= () => {
+const TherapistProfile = () => {
   return (
-  <>
-  <div className='mt-[1vh] p-3 relative'>
-<h1 className="text-[20px] font-semibold">Reports</h1>
-<p className="text-[14px]">Overview of all of your incomes and appointments</p>
-<div className="flex gap-2 lg:flex-row sm:flex-col xs:flex-col ">
-<div className=" lg:w-[70%] sm:w-[100%] xs:w-[100%] border-[#B8B8B8] border-[1px] rounded-lg px-3 py-5 mt-2">
-  <div className="flex justify-between">
+    <div className="p-3 mb-3 mt-[1vh]">
+      <h1 className="text-[20px] font-semibold">Therapists</h1>
+      <p className="text-[14px]">It's okay to not be okay—let's work on it together</p>
+      <div className="flex gap-3 mt-5 lg:flex-row sm:flex-col xs:flex-col">
+         <TherapistInfo />
+         <div className="lg:w-[70%] sm:w-[100%] xs:w-[100%]">
+            <TotalPatients />
+            <div className="  border-[#B8B8B8] border-[1px] rounded-lg px-3 py-5 mt-2">
+  <div className="flex justify-between ">
   <h1 className="text-[20px] font-semibold">Today's Sale</h1>
 
     <Popover>
@@ -34,25 +35,18 @@ const Report= () => {
     </Popover>
 
   </div>
-  <div className="flex gap-2 lg:w-[100%]  sm:w-[100%] xs:w-[100%] lg:flex-row py-3 sm:flex-col xs:flex-col">  
+            <div className="flex gap-2 lg:w-[100%]  sm:w-[100%] xs:w-[100%] lg:flex-row py-3 sm:flex-col xs:flex-col">  
     <Cards total='579' icons={User} desc='+10.5% from yesterday' head='Total Patients'/>
     <Cards total='579' icons={Calendar} desc='+10.5% from yesterday' head='Total Appointments'/>
     <Cards total='579' icons={RefreshCcwDot} desc='+10.5% from yesterday' head='Total Treatment '/>
     <Cards total='579' icons={Wallet} desc='+10.5% from yesterday' head='Total Income'/>
   </div>
-</div>
-<Topdepartments />
-</div>
-<div className="flex gap-2 lg:flex-row sm:flex-col xs:flex-col mt-2  ">
-<TotalEarnings />
-<TotalPatients />
-</div>
-<TherapistTable />
-</div>
-
-  </>
-
+  </div>
+         </div>
+      </div>
+      <Feedback />
+      </div>
   )
 }
 
-export default Report
+export default TherapistProfile

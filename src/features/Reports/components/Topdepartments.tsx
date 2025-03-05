@@ -9,7 +9,7 @@ const Topdepartments = () => {
   return (
     <div className="border-[#B8B8B8] border-[1px] rounded-lg px-3 py-5 mt-2 lg:w-[30%] sm:w-[100%] xs:w-[100%]">
      <div className="flex justify-between">
-  <h1 className="text-[20px] font-semibold">Top Department</h1>
+  <h1 className="text-[20px] font-semibold">Top Departments</h1>
 
     <Popover>
       <PopoverTrigger> <Button variant='outline'>  <ListFilter /></Button>

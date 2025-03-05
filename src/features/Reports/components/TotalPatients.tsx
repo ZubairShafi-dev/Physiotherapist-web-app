@@ -24,7 +24,7 @@ const data = [
 ];
 const TotalPatients = () => {
   return (
-    <div className="border-[#B8B8B8] border-[1px] rounded-lg px-3 py-5 mt-2 lg:w-[70%] sm:w-[100%] xs:w-[100%]">
+    <div className="border-[#B8B8B8] border-[1px] rounded-lg px-3 py-5  sm:w-[100%] xs:w-[100%]">
     <div className="flex justify-between">
  <h1 className="text-[20px] font-semibold">Total Patients</h1>
 

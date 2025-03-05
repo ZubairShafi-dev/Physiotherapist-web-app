@@ -1,4 +1,6 @@
 import { ArrowRight, Circle } from "lucide-react"
+import {  useNavigate } from "react-router-dom"
+
 
 interface TherapistProps{
   name:string,
@@ -7,6 +9,11 @@ interface TherapistProps{
   status:string
 }
 const TherapistsCards:React.FC<TherapistProps> = ({name,title,img,status}) => {
+  const navigate=useNavigate()
+  const handleRoute=()=>{
+    navigate('/therapistprofile',{state:{name,title,img}})
+
+  }
   return (
     <div className="rounded-xl relative border-[#B8B8B8] border-[1px] lg:h-[150px] sm:h-[200px] xs:h-[200px] bg-cover bg-center 
     " style={{ backgroundImage: `url(${img})` }}>
@@ -19,7 +26,9 @@ const TherapistsCards:React.FC<TherapistProps> = ({name,title,img,status}) => {
         box-border px-7 py-2">
           <h1 className="font-bold text-[20px] text-center">{name}</h1>
           <p className="text-[11px] text-center ">{title}</p>
-          <button className=" flex items-center text-[9px] mt-1 bg-red-400 text-white gap-1 p-2 rounded-md font-semibold translate-x-10">Explore Profile <ArrowRight  size={15}/></button>
+    <button className=" flex items-center text-[9px] mt-1 bg-red-400 text-white gap-1 p-2 rounded-md font-semibold translate-x-10" onClick={handleRoute}>Explore Profile <ArrowRight  size={15}/></button>
+    
+         
         </div>
     </div>
   )

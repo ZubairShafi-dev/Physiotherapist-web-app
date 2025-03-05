@@ -120,7 +120,7 @@ const TherapistTable = () => {
   <TableHead className="text-[#4D515A]  font-semibold min-w-[150px]">Total Patients</TableHead>
   
   <TableHead className="text-[#4D515A]  font-semibold min-w-[150px]">Total Business</TableHead>
-  <TableHead className="text-[#4D515A]  font-semibold min-w-[150px]">Overall Performance</TableHead>
+  <TableHead className="text-[#4D515A]  font-semibold min-w-[180px]">Overall Performance</TableHead>
   <TableHead></TableHead>
 </TableRow>
 </TableHeader>
