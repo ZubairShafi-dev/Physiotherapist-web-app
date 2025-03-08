@@ -3,6 +3,7 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
+    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -13,9 +14,11 @@ import {
     PopoverTrigger,
   } from "@/components/ui/popover"
 import { EllipsisVertical } from "lucide-react"
+
   
 
 const Option = () => {
+
   return (
 
 <Popover >
@@ -32,13 +35,13 @@ const Option = () => {
       <DialogTitle> Appointment</DialogTitle>
         <DialogDescription className="p-4">
         You really want to cancel appointment?.
-        <div className="mt-6 relative justify-items-start">
-        <Button variant='outline'>No</Button>
-        <Button variant='outline' className="bg-[#059691] text-white ml-3">Yes</Button>
-        </div>
+       
 
         </DialogDescription>
+
         </DialogHeader>
+        <DialogFooter>   <Button variant='outline'>No</Button>
+        <Button variant='outline' className="bg-[#059691] hover:bg-opacity-30 text-white ml-3">Yes</Button></DialogFooter>
     </DialogContent>
   </Dialog>
   </PopoverContent>

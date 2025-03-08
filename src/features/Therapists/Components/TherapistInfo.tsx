@@ -21,7 +21,7 @@ const TherapistInfo = () => {
         <PhoneCall size={15}/>   Phone: +92 300 000 000 0
      </div>
      <div className='flex gap-3 mt-4 text-[#383838] items-center text-[11px]'  >
-        <Mail size={15}/> Email: hamzasabir@gmail.com
+        <Mail size={15}/> Email: {name}@gmail.com
      </div>
      <div className='flex gap-3 mt-4 text-[#383838] items-center text-[11px]'  >
         <Building size={15}/>      Office: Building A, Room 102, City Hospital

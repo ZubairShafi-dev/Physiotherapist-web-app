@@ -15,7 +15,7 @@ const TherapistsCards:React.FC<TherapistProps> = ({name,title,img,status}) => {
 
   }
   return (
-    <div className="rounded-xl relative border-[#B8B8B8] border-[1px] lg:h-[150px] sm:h-[200px] xs:h-[200px] bg-cover bg-center 
+    <div className="rounded-xl relative border-[#B8B8B8] border-[1px] lg:h-[150px] sm:h-[200px] xs:h-[200px]  bg-center 
     " style={{ backgroundImage: `url(${img})` }}>
      <Circle className={`absolute top-[-8%] left-[-2%] ${
   status === "active" ? "text-[#189200] fill-[#189200]" : status === "pending" ? "text-[#FFC300] fill-[#FFC300]" : "text-[#FF0000] fill-[#FF0000]"
